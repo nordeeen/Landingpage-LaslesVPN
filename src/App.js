@@ -3,6 +3,7 @@ import Header from 'components/Header';
 import About from 'components/About';
 import ContentAbout from 'components/ContentAbout';
 import Features from 'components/Features';
+import Pricing from 'components/Pricing';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <About />
       <ContentAbout />
       <Features />
+      <Pricing />
     </div>
   );
 }
