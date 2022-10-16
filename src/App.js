@@ -4,6 +4,7 @@ import About from 'components/About';
 import ContentAbout from 'components/ContentAbout';
 import Features from 'components/Features';
 import Pricing from 'components/Pricing';
+import HugeGlobal from 'components/HugeGlobal';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ContentAbout />
       <Features />
       <Pricing />
+      <HugeGlobal />
     </div>
   );
 }
