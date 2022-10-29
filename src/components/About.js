@@ -1,5 +1,6 @@
 import React from 'react';
 import aboutHero from 'assets/ilustration/first-hero.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const About = () => {
   return (
@@ -26,9 +27,10 @@ const About = () => {
           </div>
 
           <div className="space-x-10">
-            <img
+            <LazyLoadImage
               src={aboutHero}
               alt="about-hero"
+              placeholderSrc={aboutHero}
               className="w-[38.203rem] h-[23.903rem] object-contain"
             />
           </div>

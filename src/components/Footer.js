@@ -3,6 +3,7 @@ import logoFooter from 'assets/logos/logo-footer.png';
 import iconFb from 'assets/icons/Facebook.png';
 import iconIg from 'assets/icons/Instagram.png';
 import iconTw from 'assets/icons/twitter.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const footerDatas = [
   {
@@ -50,19 +51,39 @@ const products = [
 const FooterPlans = ({iconFooter, title, firstIcon, secondIcon, threeIcon}) => {
     return (
       <div className="ml-9">
-        <img src={iconFooter} alt="logo-footer" className="w-[149px] h-[36px] object-cover" />
+        <LazyLoadImage
+          src={iconFooter}
+          alt="logo-footer"
+          placeholderSrc={iconFooter}
+          className="w-[149px] h-[36px] object-cover"
+        />
         <div className="w-[340px] h-[61px] my-5">
           <p className="text-base font-medium text-[##4F5665]">{title}</p>
         </div>
         <div className="w-auto h-[60px] flex justify-start items-center py-3 gap-6">
-          <a href='#/' className='hover:-translate-y-2 transition-all duration-75'>
-          <img src={firstIcon} alt="icons-facebook" className="w-[60px] h-[60px] object-contain" />
+          <a href="#/" className="hover:-translate-y-2 transition-all duration-75">
+            <LazyLoadImage
+              src={firstIcon}
+              alt="icon-facebook"
+              placeholderSrc={firstIcon}
+              className="w-[60px] h-[60px] object-contain"
+            />
           </a>
-          <a href='#/' className='hover:-translate-y-2 transition-all duration-75'>
-          <img src={secondIcon} alt="icons-twitter" className="w-[60px] h-[60px] object-contain" />
+          <a href="#/" className="hover:-translate-y-2 transition-all duration-75">
+            <LazyLoadImage
+              src={secondIcon}
+              alt="icon-twitter"
+              placeholderSrc={secondIcon}
+              className="w-[60px] h-[60px] object-contain"
+            />
           </a>
-          <a href='#/' className='hover:-translate-y-2 transition-all duration-75'>
-          <img src={threeIcon} alt="icons-instagram" className="w-[60px] h-[60px] object-contain" />
+          <a href="#/" className="hover:-translate-y-2 transition-all duration-75">
+            <LazyLoadImage
+              src={threeIcon}
+              alt="icon-instagram"
+              placeholderSrc={threeIcon}
+              className="w-[60px] h-[60px] object-contain"
+            />
           </a>
         </div>
         <p className="text-lg text-[#AFB5C0] font-medium mt-3">&copy; 2022 LaslesVPN</p>

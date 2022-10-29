@@ -5,6 +5,7 @@ import Reddit from 'assets/logos/reddit.png';
 import Amazon from 'assets/logos/amazon.png';
 import Discord from 'assets/logos/discord.png';
 import Sportify from 'assets/logos/sportify.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const sponsor = [
   {
@@ -52,17 +53,21 @@ const HugeGlobal = () => {
           </div>
 
           {/* Image Globe */}
-          <img src={Globe} alt="Globe" className="w-[1060px] h-[537.77px] object-contain" />
+          <LazyLoadImage
+            src={Globe}
+            alt="image-globe"
+            placeholderSrc={Globe}
+            className="w-[1060px] h-[537.77px] object-contain"/>
           {/* Wrapper Sponsor */}
           <div className="w-[1135.64px] h-[208.32] flex justify-around py-2 px-2 mt-[35.81px] mb-[50px]">
             {sponsor.map((val) => {
               return (
-                <img
+                <LazyLoadImage
                   key={val.id}
                   src={val.logos}
                   alt={val.alt}
-                  className="w-[200px] h-[102.5px] object-contain"
-                />
+                  placeholderSrc={val.logos}
+                  className="w-[200px] h-[102.5px] object-contain"/>
               );
             })}
           </div>

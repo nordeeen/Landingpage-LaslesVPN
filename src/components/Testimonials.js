@@ -6,6 +6,7 @@ import threeImg from "assets/images/img-card-3.png";
 import triDots from "assets/icons/three-dots.png";
 import arrowLeft from "assets/icons/arrow-left.png";
 import arrowRight from 'assets/icons/arrow-right.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const users = [
   {
@@ -38,9 +39,15 @@ const CardTestimonial = (props) => {
     <div
       id={props.id}
       className="bg-[#FFFF] w-auto h-[230px] rounded-[10px] border-2 border-[#F53838] py-[30px] px-[29px] mb-[60px]"
-      style={props.isSelect ? { borderColor: '#F53838' } : { borderColor: '#DDDDDD' }}>
+      style={props.isSelect ? { borderColor: '#F53838' } : { borderColor: '#DDDDDD' }}
+    >
       <div className="w-auto h-auto flex rounded-t-[10px]">
-        <img src={props.img} alt={props.img} className="w-[48px] h-[50px] object-contain mr-5" />
+        <LazyLoadImage
+          src={props.img}
+          alt={props.img}
+          placeholderSrc={props.img}
+          className="w-[48px] h-[50px] object-contain mr-5"
+        />
         <div className="flex flex-col items-center">
           <h2 className="text-lg font-medium text-[#0B132A]">{props.name}</h2>
           <p className="text-sm font-normal text-[#4F5665]">{props.location}</p>
@@ -48,7 +55,11 @@ const CardTestimonial = (props) => {
         <div className="flex flex-col ml-auto">
           <p>4.</p>
           <div className="w-[35px] h-[16px] flex justify-end">
-            <img src={props.icon} alt={props.icon} className="w-[16px] h-[16px]" />
+            <LazyLoadImage
+              src={props.icon}
+              alt={props.icon}
+              placeholderSrc={props.icon}
+              className="w-[16px] h-[16px]"/>
           </div>
           <p>5</p>
         </div>
@@ -94,25 +105,31 @@ const Testimonials = () => {
           })}
         </div>
         <div className="bg-[#FFFF] flex justify-around items-center py-4">
-          <img src={triDots} alt="icon-dots" className="w-[130px] h-[15px] object-contain"/>
+          <LazyLoadImage
+            src={triDots}
+            alt="icon-dots"
+            placeholderSrc={triDots}
+            className="w-[130px] h-[15px] object-contain"
+          />
           <div className="flex space-x-4">
             {/* button oval left*/}
             <button
               type="submit"
               className="w-[40px] h-[40px] border-2 rounded-full border-[#F53838]">
-              <img
+              <LazyLoadImage
                 src={arrowLeft}
                 alt="icon-arrow-left"
+                placeholderSrc={arrowLeft}
                 className="w-[30px] h-[30px] object-contain block mx-auto w-[50%]"
               />
             </button>
             {/* button oval right*/}
             <button type="submit" className="w-[40px] h-[40px] rounded-full bg-[#F53838]">
-              <img
+              <LazyLoadImage
                 src={arrowRight}
                 alt="icon-arrow-right"
-                className="w-[30px] h-[30px] object-contain block mx-auto w-[50%]"
-              />
+                placeholderSrc={arrowRight}
+                className="w-[30px] h-[30px] object-contain block mx-auto w-[50%]"/>
             </button>
           </div>
         </div>

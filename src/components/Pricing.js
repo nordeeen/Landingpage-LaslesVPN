@@ -1,6 +1,7 @@
 import React from 'react';
 import boxPrice from 'assets/ilustration/box.png';
 import checkSucces from 'assets/icons/check.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const plans = [
   {
@@ -47,18 +48,22 @@ const CardPlan = ({ title, price, features, isSelect }) => {
       className="flex mx-3 justify-around bg-white w-[330px] h-[760px] pt-[79.63px] px-[92.55px] rounded-[10px] border-2 border-black"
       style={isSelect ? { borderColor: '#F53838' } : { borderColor: '#DDDDDD' }}>
       <div className="flex flex-col justify-around items-center">
-        <img src={boxPrice} alt="box-price" className="w-[144.9px] h-[165.37px] object-contain " />
+        <LazyLoadImage
+          src={boxPrice}
+          alt="box-price"
+          placeholderSrc={boxPrice}
+          className="w-[144.9px] h-[165.37px] object-contain"/>
         <ul>
           <p className="text-lg font-medium text-center text-[#0B132A] pb-8">{title}</p>
           {features.map((val, index) => {
             return (
               <div className="w-[180.36px] h-[30px]">
                 <li key={index} className="flex">
-                  <img
+                  <LazyLoadImage
                     src={checkSucces}
-                    alt="check"
-                    className="w-[24px] h-[24px] object-contain mr-5"
-                  />
+                    alt="logo-check"
+                    placeholderSrc={checkSucces}
+                    className="w-[24px] h-[24px] object-contain mr-5"/>
                   <p className="text-sm font-normal text-[#4F5665]">{val}</p>
                 </li>
               </div>
@@ -73,8 +78,7 @@ const CardPlan = ({ title, price, features, isSelect }) => {
               isSelect
                 ? { backgroundColor: '#F53838', color: 'white' }
                 : { backgroundColor: 'white' }
-            }
-          >
+            }>
             Select
           </button>
         </div>
