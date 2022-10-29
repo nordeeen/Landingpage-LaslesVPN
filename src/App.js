@@ -6,6 +6,7 @@ import Features from 'components/Features';
 import Pricing from 'components/Pricing';
 import HugeGlobal from 'components/HugeGlobal';
 import Testimonials from 'components/Testimonials';
+import Footer from 'components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Pricing />
       <HugeGlobal />
       <Testimonials/>
+      <Footer/>
     </div>
   );
 }

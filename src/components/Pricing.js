@@ -45,8 +45,7 @@ const CardPlan = ({ title, price, features, isSelect }) => {
   return (
     <section
       className="flex mx-3 justify-around bg-white w-[330px] h-[760px] pt-[79.63px] px-[92.55px] rounded-[10px] border-2 border-black"
-      style={isSelect ? { borderColor: '#F53838' } : { borderColor: '#DDDDDD' }}
-    >
+      style={isSelect ? { borderColor: '#F53838' } : { borderColor: '#DDDDDD' }}>
       <div className="flex flex-col justify-around items-center">
         <img src={boxPrice} alt="box-price" className="w-[144.9px] h-[165.37px] object-contain " />
         <ul>
