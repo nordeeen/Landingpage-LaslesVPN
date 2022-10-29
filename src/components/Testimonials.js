@@ -115,21 +115,21 @@ const Testimonials = () => {
             {/* button oval left*/}
             <button
               type="submit"
-              className="w-[40px] h-[40px] border-2 rounded-full border-[#F53838]">
+              className="w-[40px] h-[40px] border-2 rounded-full border-[#F53838] pt-1">
               <LazyLoadImage
                 src={arrowLeft}
                 alt="icon-arrow-left"
                 placeholderSrc={arrowLeft}
-                className="w-[30px] h-[30px] object-contain block mx-auto w-[50%]"
+                className="w-[25px] h-[25px] object-contain block mx-auto w-[50%]"
               />
             </button>
             {/* button oval right*/}
-            <button type="submit" className="w-[40px] h-[40px] rounded-full bg-[#F53838]">
+            <button type="submit" className="w-[40px] h-[40px] rounded-full bg-[#F53838] pt-1">
               <LazyLoadImage
                 src={arrowRight}
                 alt="icon-arrow-right"
                 placeholderSrc={arrowRight}
-                className="w-[30px] h-[30px] object-contain block mx-auto w-[50%]"/>
+                className="w-[25px] h-[25px] object-contain block mx-auto w-[50%]"/>
             </button>
           </div>
         </div>
