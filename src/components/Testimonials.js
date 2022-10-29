@@ -99,7 +99,7 @@ const Testimonials = () => {
             {/* button oval left*/}
             <button
               type="submit"
-              className="w-[58px] h-[60px] border-2 rounded-full border-[#F53838]">
+              className="w-[40px] h-[40px] border-2 rounded-full border-[#F53838]">
               <img
                 src={arrowLeft}
                 alt="icon-arrow-left"
@@ -107,7 +107,7 @@ const Testimonials = () => {
               />
             </button>
             {/* button oval right*/}
-            <button type="submit" className="w-[58px] h-[60px] rounded-full bg-[#F53838]">
+            <button type="submit" className="w-[40px] h-[40px] rounded-full bg-[#F53838]">
               <img
                 src={arrowRight}
                 alt="icon-arrow-right"
