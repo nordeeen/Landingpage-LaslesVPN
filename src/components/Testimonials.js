@@ -1,11 +1,11 @@
 import React from 'react'
-import Star from 'assets/icons/star.png';
-import firstImg from "assets/images/img-card-1.png";
-import twoImg from "assets/images/img-card-2.png";
-import threeImg from "assets/images/img-card-3.png";
-import triDots from "assets/icons/three-dots.png";
-import arrowLeft from "assets/icons/arrow-left.png";
-import arrowRight from 'assets/icons/arrow-right.png';
+import Star from '../assets/icons/star.png';
+import firstImg from "../assets/images/img-card-1.png";
+import twoImg from "../assets/images/img-card-2.png";
+import threeImg from "../assets/images/img-card-3.png";
+import triDots from "../assets/icons/three-dots.png";
+import arrowLeft from "../assets/icons/arrow-left.png";
+import arrowRight from '../assets/icons/arrow-right.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const users = [
@@ -38,7 +38,7 @@ const CardTestimonial = (props) => {
   return (
     <div
       id={props.id}
-      className="bg-[#FFFF] w-auto h-[230px] rounded-[10px] border-2 border-[#F53838] py-[30px] px-[29px] mb-[60px]"
+      className="bg-[#FFFF] w-auto h-[230px] rounded-[10px] border-2 border-[#F53838] py-[30px] px-[29px] mb-[60px] sm:w-[90%] sm:px-8 sm:overflow-x-hidden"
       style={props.isSelect ? { borderColor: '#F53838' } : { borderColor: '#DDDDDD' }}
     >
       <div className="w-auto h-auto flex rounded-t-[10px]">
@@ -64,8 +64,8 @@ const CardTestimonial = (props) => {
           <p>5</p>
         </div>
       </div>
-      <div className="w-[329.02px] h-[100px] mt-4">
-        <p className="text-base font-normal text-left">{props.title}</p>
+      <div className="w-[329.02px] h-[100px] mt-4 sm:w-auto">
+        <p className="text-base font-normal text-left sm:text-sm">{props.title}</p>
       </div>
     </div>
   );
@@ -76,20 +76,20 @@ const Testimonials = () => {
     <>
       <section className="w-full h-auto bg-[#FFFF] pt-[50px]">
         <div className="flex flex-col justify-center items-center">
-          <div className="w-[433.34px] h-[100px] mb-5">
-            <h2 className="text-center text-4xl font-medium text-[#0B132A]">
+          <div className="w-[433.34px] h-[100px] mb-5 sm:px-10">
+            <h2 className="text-center text-4xl font-medium text-[#0B132A] sm:text-center sm:text-3xl">
               Trusted by Thousands of Happy Customer
             </h2>
           </div>
-          <div className="w-[537.07px] h-[60px] mb-[60px]">
-            <p className="text-center text-base font-normal text-[#4F5665]">
+          <div className="w-[537.07px] h-[60px] mb-[60px] sm:w-auto sm:px-8">
+            <p className="text-center text-base font-normal text-[#4F5665] sm:text-left sm:text-lg">
               These are the stories of our customers who have joined us with great pleasure when
               using this crazy feature.
             </p>
           </div>
         </div>
         {/* Wrapper Cards */}
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex justify-center items-center gap-4 sm:gap-0 sm:flex sm:flex-col">
           {users.map((item, index) => {
             return (
               <CardTestimonial
@@ -104,7 +104,7 @@ const Testimonials = () => {
             );
           })}
         </div>
-        <div className="bg-[#FFFF] flex justify-around items-center py-4">
+        <div className="bg-[#FFFF] flex justify-around items-center py-4 sm:hidden">
           <LazyLoadImage
             src={triDots}
             alt="icon-dots"
@@ -120,7 +120,7 @@ const Testimonials = () => {
                 src={arrowLeft}
                 alt="icon-arrow-left"
                 placeholderSrc={arrowLeft}
-                className="w-[25px] h-[25px] object-contain block mx-auto w-[50%]"
+                className="w-[25px] h-[25px] object-contain block mx-auto"
               />
             </button>
             {/* button oval right*/}
@@ -129,7 +129,7 @@ const Testimonials = () => {
                 src={arrowRight}
                 alt="icon-arrow-right"
                 placeholderSrc={arrowRight}
-                className="w-[25px] h-[25px] object-contain block mx-auto w-[50%]"/>
+                className="w-[25px] h-[25px] object-contain block mx-auto"/>
             </button>
           </div>
         </div>

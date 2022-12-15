@@ -1,6 +1,6 @@
 import React from 'react';
-import boxPrice from 'assets/ilustration/box.png';
-import checkSucces from 'assets/icons/check.png';
+import boxPrice from '../assets/ilustration/box.png';
+import checkSucces from '../assets/icons/check.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const plans = [
@@ -45,7 +45,7 @@ const plans = [
 const CardPlan = ({ title, price, features, isSelect }) => {
   return (
     <section
-      className="flex mx-3 justify-around bg-white w-[330px] h-[760px] pt-[79.63px] px-[92.55px] rounded-[10px] border-2 border-black"
+      className="flex mx-3 justify-around bg-white w-[330px] h-[760px] pt-[79.63px] px-[92.55px] rounded-[10px] border-2 border-black sm:h-auto sm:py-10 sm:overflow-x-hidden"
       style={isSelect ? { borderColor: '#F53838' } : { borderColor: '#DDDDDD' }}>
       <div className="flex flex-col justify-around items-center">
         <LazyLoadImage
@@ -92,15 +92,15 @@ const Pricing = () => {
     <>
       <section className="w-full h-auto">
         <div className="flex flex-col justify-center items-center pt-[66.65px] pb-[66.65px]">
-          <h2 className="text-center text-[2.188rem] leading-[50px] font-medium text-[##0B132A] mb-5">
+          <h2 className="text-center text-[2.188rem] leading-[50px] font-medium text-[##0B132A] mb-5 sm:text-3xl">
             Choose Your Plan
           </h2>
-          <div className="w-[555px] h-[60px]">
-            <p className="text-center text-[1rem] leading-[30px] font-normal text-[#4F5665]">
+          <div className="w-[555px] h-[60px] sm:w-auto sm:px-10">
+            <p className="text-center text-[1rem] leading-[30px] font-normal text-[#4F5665] sm:text-lg sm:text-left">
               Let's choose the package that is best for you and explore it happily and cheerfully.
             </p>
           </div>
-          <div className="flex justify-center items-center mt-[60px]">
+          <div className="flex justify-center items-center mt-[60px] sm:flex sm:flex-col sm:gap-4">
             {/* Card */}
             {plans.map((val, index) => {
               // console.log(index + 1 === plans.length);

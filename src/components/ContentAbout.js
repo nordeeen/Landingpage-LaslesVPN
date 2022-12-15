@@ -1,7 +1,7 @@
 import React from 'react';
-import User from 'assets/icons/user.png';
-import Location from 'assets/icons/location.png';
-import Server from 'assets/icons/server.png';
+import User from '../assets/icons/user.png'
+import Location from '../assets/icons/location.png';
+import Server from '../assets/icons/server.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const cardDatas = [
@@ -28,13 +28,13 @@ const cardDatas = [
 const ContentAbout = () => {
   return (
     <>
-      <section className="w-full h-auto bg-[#F6F6F6] flex justify-center pt-[103px]">
-        <div className="w-[1140px] h-[200px] flex">
+      <section className="w-full h-auto bg-[#F6F6F6] flex justify-center pt-[103px] sm:mx-auto sm:overflow-x-hidden">
+        <div className="w-[1140px] h-[200px] flex sm:flex-col sm:h-screen sm:justify-around">
           {cardDatas.map((item) => {
             return (
               <div
                 key={item.id}
-                className="flex w-[380px] h-auto items-center justify-center rounded-[10px] bg-[#FFFF]"
+                className="flex w-[380px] h-auto items-center justify-center rounded-[10px] bg-[#FFFF] sm:h-[200px] sm:flex sm:items-center sm:mx-auto"
                 style={
                   item.id === 2
                     ? { borderRight: '2px solid', borderLeft: '2px solid', borderColor: '#D9D9D9' }

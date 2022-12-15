@@ -1,5 +1,5 @@
 import React from 'react';
-import logoHeader from 'assets/logos/logo-header.png';
+import logoHeader from '../assets/logos/logo-header.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Header = () => {
@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full h-auto py-6 px-6 bg-[#F6F6F6]">
+      <header className="w-full h-auto py-6 px-6 bg-[#F6F6F6] sm:hidden sm:pt-4 sm:overflow-x-hidden">
         <div className="flex justify-center items-center">
           <div className="pr-[150px]">
             <LazyLoadImage

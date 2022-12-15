@@ -1,8 +1,8 @@
 import React from 'react';
-import logoFooter from 'assets/logos/logo-footer.png';
-import iconFb from 'assets/icons/Facebook.png';
-import iconIg from 'assets/icons/Instagram.png';
-import iconTw from 'assets/icons/twitter.png';
+import logoFooter from '../assets/logos/logo-footer.png';
+import iconFb from '../assets/icons/Facebook.png';
+import iconIg from '../assets/icons/Instagram.png';
+import iconTw from '../assets/icons/twitter.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const footerDatas = [
@@ -50,7 +50,7 @@ const products = [
 
 const FooterPlans = ({iconFooter, title, firstIcon, secondIcon, threeIcon}) => {
     return (
-      <div className="ml-9">
+      <div className="ml-9 sm:mx-auto sm:py-6">
         <LazyLoadImage
           src={iconFooter}
           alt="logo-footer"
@@ -58,9 +58,9 @@ const FooterPlans = ({iconFooter, title, firstIcon, secondIcon, threeIcon}) => {
           className="w-[149px] h-[36px] object-cover"
         />
         <div className="w-[340px] h-[61px] my-5">
-          <p className="text-base font-medium text-[##4F5665]">{title}</p>
+          <p className="text-base font-medium text-[##4F5665] sm:text-left">{title}</p>
         </div>
-        <div className="w-auto h-[60px] flex justify-start items-center py-3 gap-6">
+        <div className="w-auto h-[60px] flex justify-start items-center py-3 gap-6 sm:flex sm:justify-center">
           <a href="#/" className="hover:-translate-y-2 transition-all duration-75">
             <LazyLoadImage
               src={firstIcon}
@@ -86,7 +86,7 @@ const FooterPlans = ({iconFooter, title, firstIcon, secondIcon, threeIcon}) => {
             />
           </a>
         </div>
-        <p className="text-lg text-[#AFB5C0] font-medium mt-3">&copy; 2022 LaslesVPN</p>
+        <p className="text-lg text-[#AFB5C0] font-medium mt-3 sm:hidden">&copy; 2022 LaslesVPN</p>
       </div>
     );
 };
@@ -116,8 +116,8 @@ const FooterLists = ({title, lists}) => {
 const Footer = () => {
   return (
     <>
-      <footer className="w-full h-auto bg-[#F6F6F6] mt-[80px] py-12 px-6">
-        <div className="flex justify-between items-start px-4">
+      <footer className="w-full h-auto bg-[#F6F6F6] mt-[80px] py-12 px-6 sm:w-auto sm:py-8 sm:mx-auto sm:overflow-x-hidden">
+        <div className="flex justify-between items-start px-4 sm:block">
           <div>
             {footerDatas.map((val, index) => {
               return (
@@ -134,7 +134,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <div className="w-auto h-auto flex justify-between gap-10">
+            <div className="w-auto h-auto flex justify-between gap-10 sm:hidden">
               {products.map((val, index) => {
                 return <FooterLists key={index} {...val} />;
               })}
