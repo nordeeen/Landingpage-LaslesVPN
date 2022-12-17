@@ -46,13 +46,15 @@ const CardPlan = ({ title, price, features, isSelect }) => {
   return (
     <section
       className="flex mx-3 justify-around bg-white w-[330px] h-[760px] pt-[79.63px] px-[92.55px] rounded-[10px] border-2 border-black sm:h-auto sm:py-10 sm:overflow-x-hidden"
-      style={isSelect ? { borderColor: '#F53838' } : { borderColor: '#DDDDDD' }}>
+      style={isSelect ? { borderColor: '#F53838' } : { borderColor: '#DDDDDD' }}
+    >
       <div className="flex flex-col justify-around items-center">
         <LazyLoadImage
           src={boxPrice}
           alt="box-price"
           placeholderSrc={boxPrice}
-          className="w-[144.9px] h-[165.37px] object-contain"/>
+          className="w-[144.9px] h-[165.37px] object-contain"
+        />
         <ul>
           <p className="text-lg font-medium text-center text-[#0B132A] pb-8">{title}</p>
           {features.map((val, index) => {
@@ -63,7 +65,8 @@ const CardPlan = ({ title, price, features, isSelect }) => {
                     src={checkSucces}
                     alt="logo-check"
                     placeholderSrc={checkSucces}
-                    className="w-[24px] h-[24px] object-contain mr-5"/>
+                    className="w-[24px] h-[24px] object-contain mr-5"
+                  />
                   <p className="text-sm font-normal text-[#4F5665]">{val}</p>
                 </li>
               </div>
@@ -77,8 +80,9 @@ const CardPlan = ({ title, price, features, isSelect }) => {
             style={
               isSelect
                 ? { backgroundColor: '#F53838', color: 'white' }
-                : { backgroundColor: 'white' }
-            }>
+                : { backgroundColor: 'white'  }
+            }
+          >
             Select
           </button>
         </div>
@@ -90,7 +94,7 @@ const CardPlan = ({ title, price, features, isSelect }) => {
 const Pricing = () => {
   return (
     <>
-      <section className="w-full h-auto">
+      <section className="max-w-full h-auto">
         <div className="flex flex-col justify-center items-center pt-[66.65px] pb-[66.65px]">
           <h2 className="text-center text-[2.188rem] leading-[50px] font-medium text-[##0B132A] mb-5 sm:text-3xl">
             Choose Your Plan

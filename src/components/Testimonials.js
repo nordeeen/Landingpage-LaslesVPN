@@ -74,7 +74,7 @@ const CardTestimonial = (props) => {
 const Testimonials = () => {
   return (
     <>
-      <section className="w-full h-auto bg-[#FFFF] pt-[50px]">
+      <section className="max-w-full h-auto bg-[#FFFF] pt-[50px]">
         <div className="flex flex-col justify-center items-center">
           <div className="w-[433.34px] h-[100px] mb-5 sm:px-10">
             <h2 className="text-center text-4xl font-medium text-[#0B132A] sm:text-center sm:text-3xl">

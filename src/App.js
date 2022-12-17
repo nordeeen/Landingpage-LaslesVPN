@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="w-full h-screen">
+    <>
       <Header />
       <About />
       <ContentAbout />
@@ -19,7 +19,7 @@ function App() {
       <HugeGlobal />
       <Testimonials/>
       <Footer/>
-    </div>
+    </>
   );
 }
 

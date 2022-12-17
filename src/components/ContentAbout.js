@@ -28,7 +28,7 @@ const cardDatas = [
 const ContentAbout = () => {
   return (
     <>
-      <section className="w-full h-auto bg-[#F6F6F6] flex justify-center pt-[103px] sm:mx-auto sm:overflow-x-hidden">
+      <section className="max-w-full h-auto bg-[#F6F6F6] flex justify-center pt-[103px] sm:mx-auto sm:overflow-x-hidden">
         <div className="w-[1140px] h-[200px] flex sm:flex-col sm:h-screen sm:justify-around">
           {cardDatas.map((item) => {
             return (

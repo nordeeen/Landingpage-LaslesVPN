@@ -38,7 +38,7 @@ const sponsor = [
 const HugeGlobal = () => {
   return (
     <>
-      <section className="w-full h-auto bg-[#FFFF] pt-[84px] sm:overflow-x-hidden">
+      <section className="max-w-full h-auto bg-[#FFFF] pt-[84px] sm:overflow-x-hidden">
         <div className="flex flex-col justify-center items-center sm:px-4 sm:pt-6">
           <div className="w-[383.41px] h-[100px]">
             <h2 className="text-4xl text-center text-[#0B132A] font-medium">

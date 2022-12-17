@@ -102,7 +102,10 @@ const FooterLists = ({title, lists}) => {
           {lists.map((val, index) => {
             return (
               <li key={index} className="my-2">
-                <a href="/#" className="text-base font-normal text-[#4F5665] hover:underline">
+                <a
+                  href="/#"
+                  className="text-base font-normal text-[#4F5665] hover:underline hover:text-[#F53855]"
+                >
                   {val}
                 </a>
               </li>
@@ -116,7 +119,7 @@ const FooterLists = ({title, lists}) => {
 const Footer = () => {
   return (
     <>
-      <footer className="w-full h-auto bg-[#F6F6F6] mt-[80px] py-12 px-6 sm:w-auto sm:py-8 sm:mx-auto sm:overflow-x-hidden">
+      <footer className="max-w-full h-auto bg-[#F6F6F6] mt-[80px] py-12 px-6 sm:w-auto sm:py-8 sm:mx-auto sm:overflow-x-hidden">
         <div className="flex justify-between items-start px-4 sm:block">
           <div>
             {footerDatas.map((val, index) => {

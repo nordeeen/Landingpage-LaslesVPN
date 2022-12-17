@@ -38,7 +38,7 @@ const textContent = [
 const Features = () => {
   return (
     <>
-      <section className="w-full h-auto pt-[95.83px] pb-[144.81px] bg-[#F6F6F6] sm:overflow-x-hidden">
+      <section className="max-w-full h-auto pt-[95.83px] pb-[144.81px] bg-[#F6F6F6] sm:overflow-x-hidden">
         <div className="flex justify-around sm:h-[300px]">
           <LazyLoadImage
             src={heroFeatures}
